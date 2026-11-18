@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#080808">
+
+<title>L'Étoile de Manon</title>
+
+<meta name="description" content="L'Étoile de Manon : découvertes, inspirations, art de vivre et développement personnel. Les belles découvertes brillent ici.">
+
+<style>
+
+:root {
+
+  --black:#080808;
+
+  --burgundy:#701c36;
+
+  --gold:#d6b675;
+
+  --cream:#f2e9dc;
+
+}
+
+* {box-sizing:border-box;margin:0;padding:0}
+
+html {scroll-behavior:smooth}
+
+body {
+
+  background:var(--black);
+
+  color:var(--cream);
+
+  font-family:Georgia,serif;
+
+  line-height:1.7;
+
+}
+
+header {
+
+  padding:22px 7%;
+
+  border-bottom:1px solid #39202a;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:15px;
+
+}
+
+.logo {
+
+  color:var(--gold);
+
+  font-size:23px;
+
+  font-style:italic;
+
+}
+
+nav {display:flex;gap:18px;flex-wrap:wrap}
+
+nav a {
+
+  color:var(--cream);
+
+  text-decoration:none;
+
+  font-size:13px;
+
+}
+
+nav a:hover {color:var(--gold)}
+
+.hero {
+
+  min-height:570px;
+
+  padding:90px 8%;
+
+  text-align:center;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:radial-gradient(ellipse at center,#35101f,#160b10 48%,#080808 80%);
+
+}
+
+.star {color:var(--gold);font-size:42px}
+
+.hero h1 {
+
+  font-size:clamp(38px,7vw,72px);
+
+  font-weight:normal;
+
+  font-style:italic;
+
+  color:#a94765;
+
+  margin:15px 0;
+
+}
+
+.hero h2 {
+
+  color:var(--gold);
+
+  font-size:clamp(19px,4vw,28px);
+
+  font-weight:normal;
+
+}
+
+.hero p {
+
+  max-width:650px;
+
+  margin:22px auto;
+
+  color:#e2d7d0;
+
+}
+
+.button {
+
+  display:inline-block;
+
+  margin-top:20px;
+
+  padding:12px 27px;
+
+  border:1px solid var(--gold);
+
+  color:var(--gold);
+
+  text-decoration:none;
+
+  letter-spacing:1px;
+
+}
+
+.button:hover {background:var(--burgundy);color:white}
+
+section {padding:75px 8%}
+
+.section-title {
+
+  text-align:center;
+
+  color:var(--gold);
+
+  font-size:34px;
+
+  font-weight:normal;
+
+  font-style:italic;
+
+  margin-bottom:15px;
+
+}
+
+.intro {
+
+  max-width:750px;
+
+  text-align:center;
+
+  margin:auto;
+
+  color:#c9beb9;
+
+}
+
+.categories {
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+
+  gap:18px;
+
+  margin-top:38px;
+
+}
+
+.category {
+
+  padding:30px 20px;
+
+  text-align:center;
+
+  background:linear-gradient(145deg,#241018,#101010);
+
+  border:1px solid #45202f;
+
+}
+
+.symbol {color:var(--gold);font-size:30px}
+
+.category h3 {
+
+  color:#e5c4ce;
+
+  font-size:21px;
+
+  font-weight:normal;
+
+  margin:10px 0;
+
+}
+
+.category p {font-size:14px;color:#bcb1ad}
+
+.philosophy {
+
+  background:linear-gradient(120deg,#280e19,#100b0d);
+
+  text-align:center;
+
+  border-top:1px solid #4a2633;
+
+  border-bottom:1px solid #4a2633;
+
+}
+
+.philosophy blockquote {
+
+  color:var(--gold);
+
+  font-size:clamp(25px,5vw,43px);
+
+  font-style:italic;
+
+  max-width:850px;
+
+  margin:25px auto;
+
+}
+
+.philosophy p {color:#d5c6c4;max-width:700px;margin:auto}
+
+.discoveries {
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+  gap:20px;
+
+  margin-top:35px;
+
+}
+
+.discovery {
+
+  padding:28px;
+
+  border:1px solid #38202a;
+
+  background:#111;
+
+}
+
+.discovery h3 {color:var(--gold);font-weight:normal;margin-bottom:10px}
+
+.discovery p {color:#c5b9b3;font-size:14px}
+
+footer {
+
+  text-align:center;
+
+  padding:45px 20px;
+
+  border-top:1px solid #39202a;
+
+  color:#c5b8b2;
+
+}
+
+.signature {
+
+  color:var(--gold);
+
+  font-size:24px;
+
+  font-style:italic;
+
+  margin:12px 0;
+
+}
+
+footer small {font-size:12px}
+
+@media(max-width:600px) {
+
+  header {justify-content:center}
+
+  nav {justify-content:center}
+
+  .hero {min-height:510px;padding:70px 7%}
+
+  section {padding:55px 6%}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">✧ L'Étoile de Manon</div>
+
+  <nav>
+
+    <a href="#accueil">Accueil</a>
+
+    <a href="#univers">Nos univers</a>
+
+    <a href="#philosophie">Philosophie</a>
+
+    <a href="#decouvertes">Découvertes</a>
+
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero" id="accueil">
+
+  <div class="star">✧</div>
+
+  <h1>L'Étoile de Manon</h1>
+
+  <h2>Rêve ta vie, crois en tes possibilités,<br>crée ta réalité.</h2>
+
+  <p>
+
+    Un univers d'inspirations, de découvertes et de belles choses.
+
+    Une invitation à imaginer une vie qui nous ressemble et à
+
+    avancer chaque jour vers elle.
+
+  </p>
+
+  <a class="button" href="#univers">DÉCOUVRIR NOTRE UNIVERS</a>
+
+</section>
+
+<section id="univers">
+
+  <h2 class="section-title">Nos univers</h2>
+
+  <p class="intro">
+
+    Des découvertes, des inspirations et des coups de cœur
+
+    autour de tout ce qui rend la vie plus belle.
+
+  </p>
+
+  <div class="categories">
+
+    <article class="category">
+
+      <div class="symbol">✧</div>
+
+      <h3>Beauté & élégance</h3>
+
+      <p>Soins, maquillage, parfums et inspirations beauté.</p>
+
+    </article>
+
+    <article class="category">
+
+      <div class="symbol">⌂</div>
+
+      <h3>Maison & décoration</h3>
+
+      <p>Ambiances, décoration et idées pour se sentir chez soi.</p>
+
+    </article>
+
+    <article class="category">
+
+      <div class="symbol">◇</div>
+
+      <h3>Automobile</h3>
+
+      <p>Voitures, nouveautés et belles découvertes automobiles.</p>
+
+    </article>
+
+    <article class="category">
+
+      <div class="symbol">♡</div>
+
+      <h3>Art de vivre</h3>
+
+      <p>Voyages, cuisine, famille, plaisirs et petits bonheurs.</p>
+
+    </article>
+
+    <article class="category">
+
+      <div class="symbol">☽</div>
+
+      <h3>Développement personnel</h3>
+
+      <p>Confiance, affirmations, visualisation et évolution personnelle.</p>
+
+    </article>
+
+    <article class="category">
+
+      <div class="symbol">☆</div>
+
+      <h3>Ambition & projets</h3>
+
+      <p>Entrepreneuriat, indépendance et construction de ses rêves.</p>
+
+    </article>
+
+  </div>
+
+</section>
+
+<section class="philosophy" id="philosophie">
+
+  <div class="star">✧</div>
+
+  <h2 class="section-title">Notre philosophie</h2>
+
+  <blockquote>
+
+    « Tu es le créateur de ta propre réalité. »
+
+  </blockquote>
+
+  <p>
+
+    Tout commence par une idée, une envie, une vision.
+
+    Croire en ses possibilités, oser avancer et transformer
+
+    ses aspirations en actions concrètes : voilà notre philosophie.
+
+  </p>
+
+</section>
+
+<section id="decouvertes">
+
+  <h2 class="section-title">Les belles découvertes</h2>
+
+  <p class="intro">
+
+    Un espace dédié aux inspirations, aux coups de cœur
+
+    et aux trouvailles qui méritent d'être partagées.
+
+  </p>
+
+  <div class="discoveries">
+
+    <article class="discovery">
+
+      <h3>Nos coups de cœur</h3>
+
+      <p>Les produits et les idées qui attirent notre attention.</p>
+
+    </article>
+
+    <article class="discovery">
+
+      <h3>Nos inspirations</h3>
+
+      <p>Des idées pour embellir son quotidien et nourrir ses envies.</p>
+
+    </article>
+
+    <article class="discovery">
+
+      <h3>Nos expériences</h3>
+
+      <p>Des découvertes et des expériences à partager.</p>
+
+    </article>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <div class="star">✧</div>
+
+  <div class="signature">Les belles découvertes brillent ici.</div>
+
+  <small>© 2026 L'Étoile de Manon — Tous droits réservés.</small>
