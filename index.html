@@ -1,527 +1,597 @@
+
+
 <!DOCTYPE html>
 
 <html lang="fr">
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="theme-color" content="#080808">
+  <meta name="theme-color" content="#080607">
 
-<title>L'Étoile de Manon</title>
+  <meta name="description" content="Les étoiles de Manon : découvertes, inspirations, beauté, maison, automobile et art de vivre. Les belles découvertes brillent ici.">
 
-<meta name="description" content="L'Étoile de Manon : découvertes, inspirations, art de vivre et développement personnel. Les belles découvertes brillent ici.">
+  <title>Les étoiles de Manon — Les belles découvertes brillent ici</title>
 
-<style>
+  <style>
 
-:root {
+    :root {
 
-  --black:#080808;
+      --black: #080607;
 
-  --burgundy:#701c36;
+      --panel: #130b0f;
 
-  --gold:#d6b675;
+      --wine: #72102f;
 
-  --cream:#f2e9dc;
+      --ruby: #bd2854;
 
-}
+      --gold: #d9b875;
 
-* {box-sizing:border-box;margin:0;padding:0}
+      --gold-light: #f4dfaa;
 
-html {scroll-behavior:smooth}
+      --ivory: #f7efe5;
 
-body {
+      --muted: #c9bdb6;
 
-  background:var(--black);
+      --line: rgba(217,184,117,.34);
 
-  color:var(--cream);
+      --serif: Georgia, "Times New Roman", serif;
 
-  font-family:Georgia,serif;
+    }
 
-  line-height:1.7;
+    * { box-sizing: border-box; }
 
-}
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 
-header {
+    body {
 
-  padding:22px 7%;
+      margin: 0;
 
-  border-bottom:1px solid #39202a;
+      color: var(--ivory);
 
-  display:flex;
+      background:
 
-  justify-content:space-between;
+        radial-gradient(ellipse at 50% 8%, rgba(111,12,43,.18), transparent 38%),
 
-  align-items:center;
+        var(--black);
 
-  flex-wrap:wrap;
+      font-family: var(--serif);
 
-  gap:15px;
+      line-height: 1.7;
 
-}
+    }
 
-.logo {
+    a { color: inherit; }
 
-  color:var(--gold);
+    .topbar {
 
-  font-size:23px;
+      position: sticky;
 
-  font-style:italic;
+      top: 0;
 
-}
+      z-index: 10;
 
-nav {display:flex;gap:18px;flex-wrap:wrap}
+      background: rgba(8,6,7,.96);
 
-nav a {
+      backdrop-filter: blur(12px);
 
-  color:var(--cream);
+      border-bottom: 1px solid var(--line);
 
-  text-decoration:none;
+    }
 
-  font-size:13px;
+    .topbar-inner {
 
-}
+      max-width: 1200px;
 
-nav a:hover {color:var(--gold)}
+      margin: auto;
 
-.hero {
+      padding: 16px 24px;
 
-  min-height:570px;
+      display: flex;
 
-  padding:90px 8%;
+      align-items: center;
 
-  text-align:center;
+      justify-content: space-between;
 
-  display:flex;
+      gap: 22px;
 
-  flex-direction:column;
+    }
 
-  justify-content:center;
+    .brand {
 
-  align-items:center;
+      color: var(--gold);
 
-  background:radial-gradient(ellipse at center,#35101f,#160b10 48%,#080808 80%);
+      text-decoration: none;
 
-}
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
 
-.star {color:var(--gold);font-size:42px}
+      font-style: italic;
 
-.hero h1 {
+      white-space: nowrap;
 
-  font-size:clamp(38px,7vw,72px);
+    }
 
-  font-weight:normal;
+    .brand-star { color: var(--gold-light); margin-right: 8px; }
 
-  font-style:italic;
+    nav { display: flex; flex-wrap: wrap; gap: 12px 26px; }
 
-  color:#a94765;
+    nav a {
 
-  margin:15px 0;
+      color: var(--ivory);
 
-}
+      text-decoration: none;
 
-.hero h2 {
+      font-size: 1rem;
 
-  color:var(--gold);
+      transition: color .2s ease;
 
-  font-size:clamp(19px,4vw,28px);
+    }
 
-  font-weight:normal;
+    nav a:hover, nav a:focus { color: var(--gold); }
 
-}
+    .banner-wrap {
 
-.hero p {
+      max-width: 1540px;
 
-  max-width:650px;
+      margin: 0 auto;
 
-  margin:22px auto;
+      padding: 24px 20px 0;
 
-  color:#e2d7d0;
+    }
 
-}
+    .banner {
 
-.button {
+      display: block;
 
-  display:inline-block;
+      width: 100%;
 
-  margin-top:20px;
+      height: auto;
 
-  padding:12px 27px;
+      border: 1px solid rgba(217,184,117,.4);
 
-  border:1px solid var(--gold);
+      box-shadow: 0 20px 70px rgba(93,5,34,.2);
 
-  color:var(--gold);
+    }
 
-  text-decoration:none;
+    .intro {
 
-  letter-spacing:1px;
+      max-width: 880px;
 
-}
+      margin: 0 auto;
 
-.button:hover {background:var(--burgundy);color:white}
+      padding: 72px 24px 78px;
 
-section {padding:75px 8%}
+      text-align: center;
 
-.section-title {
+    }
 
-  text-align:center;
+    .eyebrow {
 
-  color:var(--gold);
+      color: var(--gold);
 
-  font-size:34px;
+      letter-spacing: .2em;
 
-  font-weight:normal;
+      text-transform: uppercase;
 
-  font-style:italic;
+      font-size: .78rem;
 
-  margin-bottom:15px;
+    }
 
-}
+    h1, h2, h3 { font-weight: 400; line-height: 1.2; }
 
-.intro {
+    h1 {
 
-  max-width:750px;
+      margin: 12px 0 18px;
 
-  text-align:center;
+      color: var(--ruby);
 
-  margin:auto;
+      font-size: clamp(2.25rem, 6vw, 4.5rem);
 
-  color:#c9beb9;
+      font-style: italic;
 
-}
+    }
 
-.categories {
+    .intro-lead {
 
-  display:grid;
+      color: var(--gold-light);
 
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
 
-  gap:18px;
+      font-style: italic;
 
-  margin-top:38px;
+      margin: 0 auto 18px;
 
-}
+    }
 
-.category {
+    .intro-copy {
 
-  padding:30px 20px;
+      color: var(--muted);
 
-  text-align:center;
+      font-size: 1.12rem;
 
-  background:linear-gradient(145deg,#241018,#101010);
+      max-width: 740px;
 
-  border:1px solid #45202f;
+      margin: auto;
 
-}
+    }
 
-.symbol {color:var(--gold);font-size:30px}
+    .ornament { color: var(--gold); letter-spacing: .45em; margin: 24px 0; }
 
-.category h3 {
+    .button {
 
-  color:#e5c4ce;
+      display: inline-block;
 
-  font-size:21px;
+      margin-top: 28px;
 
-  font-weight:normal;
+      padding: 13px 28px;
 
-  margin:10px 0;
+      border: 1px solid var(--gold);
 
-}
+      color: var(--gold-light);
 
-.category p {font-size:14px;color:#bcb1ad}
+      text-decoration: none;
 
-.philosophy {
+      letter-spacing: .09em;
 
-  background:linear-gradient(120deg,#280e19,#100b0d);
+      text-transform: uppercase;
 
-  text-align:center;
+      transition: background .2s ease, color .2s ease;
 
-  border-top:1px solid #4a2633;
+    }
 
-  border-bottom:1px solid #4a2633;
+    .button:hover, .button:focus {
 
-}
+      background: var(--gold);
 
-.philosophy blockquote {
+      color: var(--black);
 
-  color:var(--gold);
+    }
 
-  font-size:clamp(25px,5vw,43px);
+    .content-section {
 
-  font-style:italic;
+      padding: 70px 24px;
 
-  max-width:850px;
+      border-top: 1px solid var(--line);
 
-  margin:25px auto;
+    }
 
-}
+    .section-inner { max-width: 1120px; margin: auto; }
 
-.philosophy p {color:#d5c6c4;max-width:700px;margin:auto}
+    .section-heading { text-align: center; margin-bottom: 40px; }
 
-.discoveries {
+    .section-heading h2 {
 
-  display:grid;
+      color: var(--gold-light);
 
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      font-size: clamp(2rem, 4vw, 3rem);
 
-  gap:20px;
+      font-style: italic;
 
-  margin-top:35px;
+      margin: 8px 0 12px;
 
-}
+    }
 
-.discovery {
+    .section-heading p {
 
-  padding:28px;
+      color: var(--muted);
 
-  border:1px solid #38202a;
+      max-width: 700px;
 
-  background:#111;
+      margin: auto;
 
-}
+    }
 
-.discovery h3 {color:var(--gold);font-weight:normal;margin-bottom:10px}
+    .universes {
 
-.discovery p {color:#c5b9b3;font-size:14px}
+      display: grid;
 
-footer {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  text-align:center;
+      gap: 18px;
 
-  padding:45px 20px;
+    }
 
-  border-top:1px solid #39202a;
+    .universe {
 
-  color:#c5b8b2;
+      min-height: 185px;
 
-}
+      padding: 26px 22px;
 
-.signature {
+      background: linear-gradient(145deg, rgba(91,12,39,.25), rgba(19,11,15,.94));
 
-  color:var(--gold);
+      border: 1px solid var(--line);
 
-  font-size:24px;
+      text-align: center;
 
-  font-style:italic;
+    }
 
-  margin:12px 0;
+    .universe-symbol { color: var(--gold); font-size: 1.9rem; }
 
-}
+    .universe h3 { color: var(--gold-light); font-size: 1.4rem; margin: 8px 0; }
 
-footer small {font-size:12px}
+    .universe p { color: var(--muted); margin: 0; font-size: .98rem; }
 
-@media(max-width:600px) {
+    .philosophy {
 
-  header {justify-content:center}
+      max-width: 830px;
 
-  nav {justify-content:center}
+      margin: auto;
 
-  .hero {min-height:510px;padding:70px 7%}
+      text-align: center;
 
-  section {padding:55px 6%}
+      color: var(--muted);
 
-}
+      font-size: 1.13rem;
 
-</style>
+    }
+
+    .philosophy strong { color: var(--gold-light); font-weight: 400; }
+
+    .discoveries {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 20px;
+
+    }
+
+    .discovery {
+
+      border: 1px solid var(--line);
+
+      padding: 26px;
+
+      background: rgba(19,11,15,.78);
+
+    }
+
+    .discovery h3 { color: var(--gold-light); font-size: 1.4rem; margin: 0 0 8px; }
+
+    .discovery p { color: var(--muted); margin: 0; }
+
+    footer {
+
+      border-top: 1px solid var(--line);
+
+      padding: 38px 24px 44px;
+
+      text-align: center;
+
+      color: var(--muted);
+
+    }
+
+    .footer-brand { color: var(--gold); font-size: 1.5rem; font-style: italic; }
+
+    footer p { margin: 8px 0; }
+
+    @media (max-width: 760px) {
+
+      .topbar-inner { flex-direction: column; padding: 14px 12px 12px; gap: 8px; }
+
+      nav { justify-content: center; gap: 8px 18px; }
+
+      nav a { font-size: .92rem; }
+
+      .banner-wrap { padding: 14px 10px 0; }
+
+      .intro { padding: 50px 22px 58px; }
+
+      .content-section { padding: 54px 18px; }
+
+      .universes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+
+      .universe { padding: 22px 14px; min-height: 170px; }
+
+      .discoveries { grid-template-columns: 1fr; }
+
+    }
+
+    @media (max-width: 420px) {
+
+      .universes { grid-template-columns: 1fr; }
+
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-<header>
+  <header class="topbar">
 
-  <div class="logo">✧ L'Étoile de Manon</div>
+    <div class="topbar-inner">
 
-  <nav>
+      <a class="brand" href="#accueil"><span class="brand-star">✧</span>Les étoiles de Manon</a>
 
-    <a href="#accueil">Accueil</a>
+      <nav aria-label="Navigation principale">
 
-    <a href="#univers">Nos univers</a>
+        <a href="#accueil">Accueil</a>
 
-    <a href="#philosophie">Philosophie</a>
+        <a href="#univers">Nos univers</a>
 
-    <a href="#decouvertes">Découvertes</a>
+        <a href="#philosophie">Philosophie</a>
 
-  </nav>
+        <a href="#humain-ia">Humain & IA</a>
 
-</header>
+        <a href="#decouvertes">Découvertes</a>
 
-<main>
+      </nav>
 
-<section class="hero" id="accueil">
+    </div>
 
-  <div class="star">✧</div>
+  </header>
 
-  <h1>L'Étoile de Manon</h1>
+  <main>
 
-  <h2>Rêve ta vie, crois en tes possibilités,<br>crée ta réalité.</h2>
+    <div class="banner-wrap" id="accueil">
 
-  <p>
+      <img class="banner" src="banniere-les-etoiles-de-manon.png" alt="Bannière des étoiles de Manon, rouge rubis et or sur fond noir">
 
-    Un univers d'inspirations, de découvertes et de belles choses.
+    </div>
 
-    Une invitation à imaginer une vie qui nous ressemble et à
+    <section class="intro">
 
-    avancer chaque jour vers elle.
+      <div class="eyebrow">Bienvenue dans notre univers</div>
 
-  </p>
+      <h1>Les étoiles de Manon</h1>
 
-  <a class="button" href="#univers">DÉCOUVRIR NOTRE UNIVERS</a>
+      <p class="intro-lead">Rêve ta vie, crois en tes possibilités, crée ta réalité.</p>
 
-</section>
+      <div class="ornament">✧ ───── ♡ ───── ✧</div>
 
-<section id="univers">
+      <p class="intro-copy">
 
-  <h2 class="section-title">Nos univers</h2>
+        Un univers de découvertes, d'inspirations et de belles choses.
 
-  <p class="intro">
+        Une invitation à imaginer une vie qui nous ressemble et à avancer
 
-    Des découvertes, des inspirations et des coups de cœur
+        chaque jour vers elle, avec curiosité, confiance et plaisir.
 
-    autour de tout ce qui rend la vie plus belle.
+      </p>
 
-  </p>
+      <a class="button" href="#univers">Découvrir notre univers</a>
 
-  <div class="categories">
+    </section>
 
-    <article class="category">
+    <section class="content-section" id="univers">
 
-      <div class="symbol">✧</div>
+      <div class="section-inner">
 
-      <h3>Beauté & élégance</h3>
+        <div class="section-heading">
 
-      <p>Soins, maquillage, parfums et inspirations beauté.</p>
+          <div class="eyebrow">Explorer · S'inspirer · Découvrir</div>
 
-    </article>
+          <h2>Nos univers</h2>
 
-    <article class="category">
+          <p>Des idées et des trouvailles choisies avec goût, pour toutes les facettes de la vie.</p>
 
-      <div class="symbol">⌂</div>
+        </div>
 
-      <h3>Maison & décoration</h3>
+        <div class="universes">
 
-      <p>Ambiances, décoration et idées pour se sentir chez soi.</p>
+          <article class="universe"><div class="universe-symbol">✧</div><h3>Automobile</h3><p>Belles lignes, modèles de caractère et évasion.</p></article>
 
-    </article>
+          <article class="universe"><div class="universe-symbol">❀</div><h3>Beauté</h3><p>Soins, élégance et petits rituels pour soi.</p></article>
 
-    <article class="category">
+          <article class="universe"><div class="universe-symbol">⌂</div><h3>Maison & décoration</h3><p>Des intérieurs chaleureux et des idées inspirantes.</p></article>
 
-      <div class="symbol">◇</div>
+          <article class="universe"><div class="universe-symbol">♡</div><h3>Art de vivre</h3><p>Les plaisirs simples, les attentions et les beaux moments.</p></article>
 
-      <h3>Automobile</h3>
+          <article class="universe"><div class="universe-symbol">✿</div><h3>Fleurs & cadeaux</h3><p>Des gestes délicats pour faire plaisir et célébrer.</p></article>
 
-      <p>Voitures, nouveautés et belles découvertes automobiles.</p>
+          <article class="universe"><div class="universe-symbol">☆</div><h3>Inspirations</h3><p>Créativité, confiance et envie de construire ses projets.</p></article>
 
-    </article>
+        </div>
 
-    <article class="category">
+      </div>
 
-      <div class="symbol">♡</div>
+    </section>
 
-      <h3>Art de vivre</h3>
+    <section class="content-section" id="philosophie">
 
-      <p>Voyages, cuisine, famille, plaisirs et petits bonheurs.</p>
+      <div class="section-inner">
 
-    </article>
+        <div class="section-heading">
 
-    <article class="category">
+          <div class="eyebrow">Notre état d'esprit</div>
 
-      <div class="symbol">☽</div>
+          <h2>Notre philosophie</h2>
 
-      <h3>Développement personnel</h3>
+        </div>
 
-      <p>Confiance, affirmations, visualisation et évolution personnelle.</p>
+        <div class="philosophy">
 
-    </article>
+          <p>Nous croyons aux idées qui donnent envie, aux découvertes qui font sourire et aux petits pas qui finissent par changer beaucoup de choses.</p>
 
-    <article class="category">
+          <p><strong>Rêver ouvre une porte. Choisir, apprendre et agir permettent d'avancer.</strong></p>
 
-      <div class="symbol">☆</div>
+          <p>Les étoiles de Manon partagent leurs coups de cœur et leurs inspirations avec une idée en tête : célébrer les belles choses tout en donnant à chacune l'envie de tracer son propre chemin.</p>
 
-      <h3>Ambition & projets</h3>
+          <div class="ornament">✧ ───── ♡ ───── ✧</div>
 
-      <p>Entrepreneuriat, indépendance et construction de ses rêves.</p>
+        </div>
 
-    </article>
+      </div>
 
-  </div>
+    </section>
 
-</section>
+    <section class="content-section" id="humain-ia">
 
-<section class="philosophy" id="philosophie">
+      <div class="section-inner">
 
-  <div class="star">✧</div>
+        <div class="section-heading">
 
-  <h2 class="section-title">Notre philosophie</h2>
+          <div class="eyebrow">Une aventure humaine et créative</div>
 
-  <blockquote>
+          <h2>L'humain & l'intelligence artificielle</h2>
 
-    « Tu es le créateur de ta propre réalité. »
+        </div>
 
-  </blockquote>
+        <div class="philosophy">
 
-  <p>
+          <p>Les étoiles de Manon sont nées d'une vision humaine : celle d'imaginer, d'oser et de construire un univers qui partage des découvertes et donne envie d'avancer.</p>
 
-    Tout commence par une idée, une envie, une vision.
+          <p><strong>L'être humain imagine. L'intelligence artificielle accompagne. Ensemble, nous explorons de nouvelles possibilités.</strong></p>
 
-    Croire en ses possibilités, oser avancer et transformer
+          <p>Cette démarche met à l'honneur la créativité, le discernement et la sensibilité humaines, enrichis par les outils d'intelligence artificielle utilisés avec curiosité et responsabilité.</p>
 
-    ses aspirations en actions concrètes : voilà notre philosophie.
+        </div>
 
-  </p>
+      </div>
 
-</section>
+    </section>
 
-<section id="decouvertes">
+    <section class="content-section" id="decouvertes">
 
-  <h2 class="section-title">Les belles découvertes</h2>
+      <div class="section-inner">
 
-  <p class="intro">
+        <div class="section-heading">
 
-    Un espace dédié aux inspirations, aux coups de cœur
+          <div class="eyebrow">Les belles découvertes brillent ici</div>
 
-    et aux trouvailles qui méritent d'être partagées.
+          <h2>Le carnet des découvertes</h2>
 
-  </p>
+          <p>Un espace pour retrouver nos sélections, nos inspirations et nos coups de cœur.</p>
 
-  <div class="discoveries">
+        </div>
 
-    <article class="discovery">
+        <div class="discoveries">
 
-      <h3>Nos coups de cœur</h3>
+          <article class="discovery"><h3>Les coups de cœur</h3><p>Les objets, adresses et idées qui attirent notre attention et méritent d'être partagés.</p></article>
 
-      <p>Les produits et les idées qui attirent notre attention.</p>
+          <article class="discovery"><h3>Les inspirations du moment</h3><p>Des envies, des ambiances et des pistes pour embellir le quotidien.</p></article>
 
-    </article>
+        </div>
 
-    <article class="discovery">
+      </div>
 
-      <h3>Nos inspirations</h3>
+    </section>
 
-      <p>Des idées pour embellir son quotidien et nourrir ses envies.</p>
+  </main>
 
-    </article>
+  <footer>
 
-    <article class="discovery">
+    <div class="footer-brand">✧ Les étoiles de Manon</div>
 
-      <h3>Nos expériences</h3>
+    <p>Les belles découvertes brillent ici.</p>
 
-      <p>Des découvertes et des expériences à partager.</p>
+    <p>© <span id="year"></span> Les étoiles de Manon</p>
 
-    </article>
+  </footer>
 
-  </div>
+  <script>
 
-</section>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-</main>
+  </script>
 
-<footer>
+</body>
 
-  <div class="star">✧</div>
-
-  <div class="signature">Les belles découvertes brillent ici.</div>
-
-  <small>© 2026 L'Étoile de Manon — Tous droits réservés.</small>
+</html>
