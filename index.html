@@ -320,23 +320,8 @@
   </footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 
-  <script>
-    // Activation des vrais commentaires : remplacez la valeur ci-dessous par le shortname fourni par Disqus.
-    const disqusShortname = 'VOTRE_SHORTNAME_DISQUS';
-    if (disqusShortname !== 'VOTRE_SHORTNAME_DISQUS') {
-      window.disqus_config = function () {
-        this.page.url = window.location.origin + window.location.pathname;
-        this.page.identifier = 'les-etoiles-de-manon-temoignages';
-        this.language = 'fr';
-      };
-      const disqusScript = document.createElement('script');
-      disqusScript.src = 'https://' + disqusShortname + '.disqus.com/embed.js';
-      disqusScript.setAttribute('data-timestamp', String(Date.now()));
-      disqusScript.async = true;
-      document.body.appendChild(disqusScript);
-      document.getElementById('comments-setup-note').hidden = true;
-    }
-  </script>
+  <div id="hakanai-connect"></div>
+<script async src="https://connect.hakanai.io/embed.js" data-key="79019dfd-d0af-42b9-a67c-f2d62bcea654"></script>
 
 <div style="text-align:center; padding:25px; color:#d4af37;">
   <a href="mailto:contact.lesetoilesdemanon@gmail.com" style="color:#d4af37; text-decoration:none;">
